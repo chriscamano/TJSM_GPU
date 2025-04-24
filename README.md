@@ -1,19 +1,10 @@
 # Tracial Joint Spectral Measure Visualization (GPU Support)
 
-The code numerically visualizes the **[tracial joint spectral measure](https://arxiv.org/pdf/2310.03227)** \( \mu_{\mathbf{A}, \mathbf{B}} \) associated to the Hermitian matrices  
+The code numerically visualizes the **[tracial joint spectral measure](https://arxiv.org/pdf/2310.03227)** $\mu_{\mathbf{A}\mathbf{B}}$ on $\mathbb{R}^2$ The continuous part (_Theorem 1.7._) is given as 
 
-\[
-\mathbf{A} = \frac{\mathbf{C} + \mathbf{C}^*}{2}, \quad \mathbf{B} = \frac{\mathbf{C} - \mathbf{C}^*}{2i},
-\]
+$$\rho(a, b)=\frac{1}{2 \pi} \sum_{j=1}^n\left|\text{Im}\left[\lambda_j\left(\left(\mathbf{I}-\frac{a}{a^2+b^2} \mathbf{A}+\frac{b}{a^2+b^2} \mathbf{B}\right)(b \mathbf{A}-a \mathbf{B})^{-1}\right)\right]\right|$$
 
-by computing its continuous density  
-
-\[
-\rho(a, b) = \frac{1}{2\pi} \sum_{j=1}^n \left| \operatorname{Im} \lambda_j\left( \left( \frac{\mathbf{I} - \frac{a}{a^2 + b^2} \mathbf{A} + \frac{b}{a^2 + b^2} \mathbf{B}}{1} \right)(b\mathbf{A} - a\mathbf{B})^{-1} \right) \right|.
-\]
-
-This density describes how linear combinations \( x\mathbf{A} + y\mathbf{B} \) contribute spectrally across \( (a,b) \in \mathbb{R}^2 \). Singular components supported along rays through eigenvectors of \( \mathbf{A}^{-1} \mathbf{B} \) are overlaid via their Rayleigh quotients \( (\langle \mathbf{A}v, v \rangle, \langle \mathbf{B}v, v \rangle) \).
-
+The code is written in `torch` and computes the required eigendecompositions in parallel.
 ---
 
 ## Requirements
