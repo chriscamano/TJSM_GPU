@@ -1,4 +1,5 @@
 # Tracial Joint Spectral Measure Visualization (GPU Support)
+![image](https://github.com/user-attachments/assets/d97220da-2d80-4829-9f19-704e27fa9615)
 
 The code numerically visualizes the **[tracial joint spectral measure](https://arxiv.org/pdf/2310.03227)** $\mu_{\mathbf{A}\mathbf{B}}$ on $\mathbb{R}^2$ The continuous part (_Theorem 1.7._) is given as 
 
